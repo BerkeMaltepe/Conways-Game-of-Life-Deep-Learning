@@ -24,7 +24,7 @@ def generate_data(randomData):
         newboard_array = np.int8(newboard) * 255 
         board = torch.tensor(newboard_array/255, dtype=torch.int64).view(1,1,32,32)
         data.append(board)
-        print(len(data))
+        
 
     torch.save(data, 'train.data')
 
